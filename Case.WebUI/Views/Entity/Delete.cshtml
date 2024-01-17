@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete Person</h2>
+
+<form asp-action="Delete" method="post">
+    <div class="form-group">
+        <label>Name to Delete</label>
+        <input name="name" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>
