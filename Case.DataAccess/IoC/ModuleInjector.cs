@@ -1,6 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Case.DataAccess.Repositories;
 using Case.DataAccess.Repositories.IRepositories;
-using Case.DataAccess.Repositories;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Case.DataAccess.IoC
 {

@@ -1,6 +1,6 @@
 ﻿using Case.DataAccess.Database;
-using Microsoft.EntityFrameworkCore;
 using Case.DataAccess.Repositories.IRepositories;
+using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
 namespace Case.DataAccess.Repositories

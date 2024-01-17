@@ -17,7 +17,7 @@ namespace Case.DataAccess.Repositories
 
         public IPersonDal Person { get; private set; }
 
-    public void Save()
+        public void Save()
         {
             _db.SaveChanges();
         }

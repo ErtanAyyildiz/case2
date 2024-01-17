@@ -1,7 +1,7 @@
-using Case.DataAccess.Database;
-using Microsoft.EntityFrameworkCore;
 using Case.Business.IoC;
+using Case.DataAccess.Database;
 using Case.DataAccess.IoC;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 var builder = WebApplication.CreateBuilder(args);
 

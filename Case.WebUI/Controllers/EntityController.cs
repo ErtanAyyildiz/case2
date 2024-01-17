@@ -1,12 +1,8 @@
 ﻿using AutoMapper;
 using Case.Business.Abstracts;
-using Case.DataAccess.MsEntityFrameworks;
 using Case.Models;
 using Case.Models.DTOs;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
-using System.Drawing.Printing;
 using System.Text.Json;
 using X.PagedList;
 
@@ -20,7 +16,7 @@ namespace Case.WebUI.Controllers
         private readonly string _webApiBaseUrl = "https://localhost:7032/api/Person";
 
 
-        public EntityController(IPersonService personService,IMapper mapper, ILogger<EntityController> logger)  
+        public EntityController(IPersonService personService, IMapper mapper, ILogger<EntityController> logger)
         {
             _personService = personService;
             _mapper = mapper;
@@ -76,7 +72,7 @@ namespace Case.WebUI.Controllers
                     var content = await response.Content.ReadAsStringAsync();
                     var persons = JsonSerializer.Deserialize<List<Person>>(content, new JsonSerializerOptions
                     {
-                        PropertyNameCaseInsensitive = true 
+                        PropertyNameCaseInsensitive = true
                     });
 
                     var result = new PagedList<Person>(persons, pageNumber, pageSize);
@@ -99,7 +95,7 @@ namespace Case.WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-               // var person = _mapper.Map<Person>(personDTO);
+                // var person = _mapper.Map<Person>(personDTO);
 
                 await AddPersonToApiAsync(personDTO);
 

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Case.Business.Abstracts;
-using Case.Models.DTOs;
 using Case.Models;
+using Case.Models.DTOs;
 using Microsoft.AspNetCore.Mvc;
 using X.PagedList;
 

@@ -1,7 +1,7 @@
 ﻿using Case.DataAccess.Abstracts;
 using Case.DataAccess.Database;
-using Case.Models;
 using Case.DataAccess.Repositories;
+using Case.Models;
 
 namespace Case.DataAccess.MsEntityFrameworks
 {
@@ -18,6 +18,6 @@ namespace Case.DataAccess.MsEntityFrameworks
             return _db.People.FirstOrDefault(p => p.Name == name);
         }
 
-      
+
     }
 }
